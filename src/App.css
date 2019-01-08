@@ -10,5 +10,12 @@ img{
 }
 
 .item{
-  flex:1
+  flex: 1;
+  padding: 30px;
+}
+
+@media only screen and (max-width: 600px) {
+  .container{
+    display: block;
+  }
 }
