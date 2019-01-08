@@ -15,12 +15,13 @@ img{
   border: 1px solid green;
   position: relative;
   color: white;
+  overflow: hidden;
 }
 
 .overlay{
-  display: none;
+  transition: bottom ease 1s;
   position: absolute;
-  bottom: 0;
+  bottom: -100px;
   left: 0;
   width:100%;
   background-color: black;
@@ -28,7 +29,8 @@ img{
 }
 
 .item:hover .overlay{
-  display:block;
+  opacity: .6;
+  bottom: 0;
 }
 
 @media only screen and (max-width: 600px) {
