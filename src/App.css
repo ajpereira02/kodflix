@@ -14,7 +14,7 @@ img{
   padding: 30px;
   border: 1px solid green;
   position: relative;
-  color: white;
+  color: black;
   overflow: hidden;
 }
 
@@ -24,7 +24,7 @@ img{
   bottom: -100px;
   left: 0;
   width:100%;
-  background-color: black;
+  background-color: green;
   opacity: .8;
 }
 

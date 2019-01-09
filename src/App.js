@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import TVShow from './TVShow';
 import blackmirror from './Images/Black Mirror.png';
 import breakingbad from './Images/Breaking Bad.jpg';
 import deathnote from './Images/Death Note.jpg';
@@ -11,51 +12,19 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-
         <br /> <br /> <br />
         <div className='container'>
-          <div className='item'>
-            <img src={blackmirror} alt='Black Mirror' />
-            <div className='overlay'>
-              <h1>Black Mirror</h1>
-            </div>
-          </div>
-          <div className='item'>
-            <img src={breakingbad} alt='Breaking Bad' />
-            <div className='overlay'>
-              <h1>Breaking Bad</h1>
-            </div>
-          </div>
-          <div className='item'>
-            <img src={deathnote} alt='Death Note' />
-            <div className='overlay'>
-              <h1>Death Note</h1>
-            </div>
-          </div>
+          <TVShow name='Black Mirror' logo={blackmirror} />
+          <TVShow name='Breaking Bad' logo={breakingbad} />
+          <TVShow name='Death Note' logo={deathnote} />
         </div>
         <div className='container'>
-          <div className='item'>
-            <img src={gameofthrones} alt='Game of Thrones' />
-            <div className='overlay'>
-              <h1>Game of Thornes</h1>
-            </div>
-          </div>
-          <div className='item'>
-            <img src={thewalkingdead} alt='The walking dead' />
-            <div className='overlay'>
-              <h1>The Walking Dead</h1>
-            </div>
-          </div>
-          <div className='item'>
-            <img src={thewire} alt='The Wire' />
-            <div className='overlay'>
-              <h1>The Wire</h1>
-            </div>
-          </div>
+          <TVShow name='Game of Thrones' logo={gameofthrones} />
+          <TVShow name='The Walking Dead' logo={thewalkingdead} />
+          <TVShow name='The Wire' logo={thewire} />
         </div>
       </div>
     );
   }
 }
-
 export default App;
