@@ -1,11 +1,29 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-export default function Details() {
+export default class Details extends Component {
+
+  constructor() {
+    super();
+    this.state = {
+      WelcomeMessage: 'Hello, this will be the details page for each Movie & TV show :)'
+    };
+  }
+
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({
+        welcomeMessage: 'Coming soon! :)'
+      });
+    }, 3000);
+  }
+
+  render() {
     return (
       <div>
-          <h1>Welcome to the details page, WIP :)</h1>
-          <Link to='/'>Back to home page</Link>
-     </div>
-    )
+        <h1>{this.state.WelcomeMessage}</h1>
+        <Link to='/'>Back to home page</Link>
+      </div>
+    );
   }
+}
