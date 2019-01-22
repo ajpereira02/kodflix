@@ -1,8 +1,13 @@
+* {
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
 }
-img{
+.img{
   width: 100%;
+  height: 100%;
 }
 
 .container{
@@ -15,17 +20,18 @@ img{
 .item{
   /*flex: 1;
   flex-basis: 120px;*/
-  padding: 30px;
-  border: 1px solid green;
+  /* padding: 30px; */
+  border: 1px solid black;
   position: relative;
   color: black;
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 .overlay{
   transition: bottom ease 1s;
   position: absolute;
-  bottom: -100px;
+  bottom: -179px;
   left: 0;
   width:100%;
   background-color: green;
