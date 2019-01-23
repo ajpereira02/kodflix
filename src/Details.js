@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import getGallery from './Gallery-get';
 
 export default class Details extends Component {
@@ -13,7 +13,7 @@ export default class Details extends Component {
 
   componentDidMount() {
     let galleryId = this.props.match.params.galleryId;
-    let gallery = getGallery().find(function(gallery) {
+    let gallery = getGallery().find(function (gallery) {
       return gallery.id === galleryId;
     });
     this.setState({
@@ -22,11 +22,15 @@ export default class Details extends Component {
   }
 
   render() {
-    return (
-      <div>
-        <h1>{this.state.gallery.name}</h1>
-        <Link to='/'>Back to home page</Link>
-      </div>
-    );
+    if (this.state.gallery === undefined) {
+      return <Redirect to='/not-found' />;
+    } else {
+      return (
+        <div>
+          <h1>{this.state.gallery.name}</h1>
+          <Link to='/'>Back to home page</Link>
+        </div>
+      );
+    }
   }
 }
