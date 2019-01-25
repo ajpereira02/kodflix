@@ -2,15 +2,27 @@
   box-sizing: border-box;
 }
 h1 {
-  color: black;
-  font-size: 30px;
+  margin-top: 0;
 }
+h2 {
+  color: white;
+  font-size: 40px;
+}
+
+ {
+  background-color: bisque
+}
+
 .App {
   text-align: center;
+  text-align: center;
+  color: white;
+  font-size: xx-large;
+  backdrop-filter: blue
+  
 }
-.img{
-  width: 100%;
-  height: 100%;
+img{
+  width: 90%;
 }
 
 .container{
@@ -22,10 +34,9 @@ h1 {
 
 .item{
   /*flex: 1;
-  flex-basis: 120px;*/
-  /* padding: 30px; */
-  /*border: 1px solid black;*/
-  display: block;
+  /*flex-basis: 120px;*/
+  /*display: block;*/
+  /*padding: 30px;*/
   position: relative;
   color: black;
   overflow: hidden;
@@ -35,16 +46,20 @@ h1 {
 .overlay{
   transition: bottom ease 1s;
   position: absolute;
-  bottom: -179px;
+  bottom: -195px;
   left: 0;
   width:100%;
-  background-color: green;
+  background-color: grey;
   opacity: .8;
 }
 
 .item:hover .overlay{
   opacity: .6;
   bottom: 0;
+}
+
+.DetailsName h1 {
+  padding-top: 0;
 }
 
 @media only screen and (max-width: 600px) {
