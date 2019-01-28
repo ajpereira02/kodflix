@@ -1,5 +1,5 @@
 import React from 'react';
-import TVShow from './TVShow'
+import TVShow from '../TVShow'
 import getGallery from './Gallery-get';
 import './App.css';
 
