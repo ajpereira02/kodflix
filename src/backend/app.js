@@ -5,7 +5,8 @@ const shows = require('./tvShows');
 
 
 
-app.get('/rest/shows', (req, res) => 
-    res.send(shows()))
+app.get('/rest/shows', (req, res) => {
+    res.send(shows())
+});
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))

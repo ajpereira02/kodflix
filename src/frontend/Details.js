@@ -20,6 +20,14 @@ export default class Details extends Component {
     this.setState({
       gallery: gallery
     });
+    fetch('/rest/shows')
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (myJson) {
+        console.log(JSON.stringify(myJson));
+      });
+
   }
 
   render() {
