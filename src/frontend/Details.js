@@ -13,13 +13,13 @@ export default class Details extends Component {
   }
 
   componentDidMount() {
-    let galleryId = this.props.match.params.galleryId;
-    let gallery = getGallery().find(function (gallery) {
-      return gallery.id === galleryId;
-    });
-    this.setState({
-      gallery: gallery
-    });
+    // let galleryId = this.props.match.params.galleryId;
+    // // // let gallery = getGallery().find(function (gallery) {
+    // //   return gallery.id === galleryId;
+    
+    // this.setState({
+    //   gallery: gallery
+    // });
     fetch('/rest/shows')
       .then( response => {
         return response.json();
