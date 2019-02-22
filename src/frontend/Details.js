@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link, Redirect } from 'react-router-dom';
-import getGallery from './Gallery-get';
+// import getGallery from './Gallery-get';
 import './Details.css';
 
 export default class Details extends Component {
@@ -8,7 +8,7 @@ export default class Details extends Component {
   constructor() {
     super();
     this.state = {
-      gallery: {}
+      TVshow: []
     };
   }
 
@@ -24,12 +24,11 @@ export default class Details extends Component {
       .then( response => {
         return response.json();
       })
-      .then(myJson => {
-        console.log(JSON.stringify(myJson));
+      .then(TVshow => {
+        return TVshow.find(gallery => gallery.id);
       });
 
   }
-
   render() {
     if (this.state.gallery === undefined) {
       return <Redirect to='/not-found' />;
