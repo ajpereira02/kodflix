@@ -48,6 +48,7 @@ export default class Details extends Component {
       return (
         <div className="details">
           <div className="content">While loading page...</div>
+          <div class="loader"></div>
         </div>
       );
     }
