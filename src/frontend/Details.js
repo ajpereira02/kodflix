@@ -47,7 +47,7 @@ export default class Details extends Component {
     } else {
       return (
         <div className="details">
-          <div className="content">While loading page...</div>
+          <div className="content">Loading page...</div>
           <div class="loader"></div>
         </div>
       );
